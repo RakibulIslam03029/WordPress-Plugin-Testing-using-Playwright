@@ -1,0 +1,28 @@
+{
+  "name": "assignment-for-quality-assurance-engineer-at-wppool",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "CheckAllFunctionality": "npm run CheckLogin && npm run CheckPluginPage && npm run InstallAndActivePlugin && npm run AdminPanelDarkMode && npm run VerifyDarkModeisWorking && npm run NavigateWPDarkMode && npm run FloatingSwitchStyle && npm run CustomSwitchSize && npm run FloatingSwitchPosition && npm run DisableKeyboardShortcut && npm run ChangeAnimationEffect && npm run DarkModeOnFrontend",
+    "CheckLogin": "npx playwright test tests/test_cases/login.spec.js --workers=1 --project=chromium --headed",
+    "CheckPluginPage": "npx playwright test tests/test_cases/Check_whether_the_WP_Dark_Mode_Plugin_is_Active_or_not.spec.js --workers=1 --project=chromium --headed",
+    "InstallAndActivePlugin": "npx playwright test tests/test_cases/Install_the_Plugin_and_Activate_it.spec.js --workers=1 --project=chromium --headed",
+    "AdminPanelDarkMode": "npx playwright test tests/test_cases/Admin_Panel_Dark_Mode.spec.js --workers=1 --project=chromium --headed",
+    "VerifyDarkModeisWorking":"npx playwright test tests/test_cases/Verify_Dark_Mode_is_Working_or_not.spec.js --workers=1 --project=chromium --headed",
+    "NavigateWPDarkMode":"npx playwright test tests/test_cases/Navigate_to_the_WP_Dark_Mode.spec.js --workers=1 --project=chromium --headed",
+    "FloatingSwitchStyle":"npx playwright test tests/test_cases/Floating_Switch_Style.spec.js --workers=1 --project=chromium --headed",
+    "CustomSwitchSize":"npx playwright test tests/test_cases/Custom_Switch_size.spec.js --workers=1 --project=chromium --headed",
+    "FloatingSwitchPosition":"npx playwright test tests/test_cases/Floating_Switch_Position.spec.js --workers=1 --project=chromium --headed",
+    "DisableKeyboardShortcut":"npx playwright test tests/test_cases/KeyboardShortcut.spec.js --workers=1 --project=chromium --headed",
+    "ChangeAnimationEffect":"npx playwright test tests/test_cases/Change_The_Animation_Effect.spec.js --workers=1 --project=chromium --headed",
+    "DarkModeOnFrontend":"npx playwright test tests/test_cases/Validate-Dark_Mode_on_Frontend.spec.js --workers=1 --project=chromium --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.47.0",
+    "@types/node": "^22.5.4"
+  }
+}
